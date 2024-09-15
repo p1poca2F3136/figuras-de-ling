@@ -1,0 +1,116 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #bb86fc;
+}
+
+.question {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+select {
+    background-color: #333;
+    color: #e0e0e0;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+select:focus {
+    outline: 2px solid #bb86fc;
+}
+
+button {
+    background-color: #bb86fc;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #9a67ea;
+}
+
+#feedback {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.correct {
+    color: #03dac6;
+}
+
+.incorrect {
+    color: #cf6679;
+}
+
+/* Media query para telas menores (smartphones) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .question {
+        font-size: 16px;
+    }
+
+    select {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
