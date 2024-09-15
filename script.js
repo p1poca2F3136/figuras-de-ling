@@ -15,16 +15,22 @@ async function loadQuestions() {
 
 function showQuestion() {
     const questionData = questions[currentQuestion];
+    
+    // Gera as opções dinamicamente
+    let optionsHTML = "";
+    questionData.options.forEach(option => {
+        optionsHTML += `<option value="${option}">${option}</option>`;
+    });
+
     quizContainer.innerHTML = `
         <div class="question">${questionData.question}</div>
         <select id="answer-select">
             <option value="" disabled selected>Escolha a figura de linguagem</option>
-            <option value="Metáfora">Metáfora</option>
-            <option value="Metonímia">Metonímia</option>
-            <option value="Personificação">Personificação</option>
+            ${optionsHTML}
         </select>
         <div id="feedback"></div>
     `;
+    
     nextBtn.disabled = true;
     answered = false;
 
